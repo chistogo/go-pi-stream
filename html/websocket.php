@@ -54,7 +54,7 @@
                
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://161.6.10.112:8080");
+               var ws = new WebSocket("ws://192.168.43.13:8080");
             
                ws.onopen = function()
                {
