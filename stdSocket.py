@@ -10,7 +10,7 @@ PORT = 1776
 # Create an in-memory stream
 with picamera.PiCamera() as camera:
     camera.start_preview()
-    camera.resolution = (640, 480)
+    camera.resolution = (320, 240)
     camera.framerate = 30
     camera.vflip = True
     # Camera warm-up time
@@ -20,7 +20,7 @@ with picamera.PiCamera() as camera:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.connect((HOST,PORT))
-        connection = s.makefile('wb')
+        connection = sock.makefile('wb')
 
         myFile.seek(0)
         print "Sending Binaries..."

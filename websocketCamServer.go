@@ -30,7 +30,7 @@ func main() {
     
 
     http.HandleFunc("/", handler)
-    http.ListenAndServe(":8080", nil)
+    http.ListenAndServe(":1337", nil)
 }	
 
 //Creates a unix socket that receives data from a python script to update the 
