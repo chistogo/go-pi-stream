@@ -10,7 +10,11 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-
+    <script>
+	#img-here img {
+		width: 100%;
+	}
+    </script>
     
   </head>
   <body>
