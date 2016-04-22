@@ -20,7 +20,7 @@ with picamera.PiCamera() as camera:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.connect((HOST,PORT))
-        connection = sock.makefile('wb')
+        connection = s.makefile('wb')
 
         myFile.seek(0)
         print "Sending Binaries..."
