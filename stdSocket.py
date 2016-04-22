@@ -4,7 +4,7 @@ import io
 import time
 import picamera
 
-HOST = 'http://wkuacm.org/'
+HOST = 'wkuacm.org'
 PORT = 1776
 
 # Create an in-memory stream
@@ -29,4 +29,4 @@ with picamera.PiCamera() as camera:
         myFile.truncate()
         print "Success!!!"
 
-        s.close()
+        s.close()   
