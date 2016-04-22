@@ -46,7 +46,7 @@ func unixSocketCreate() {
     }
 
     //Create a unix Socket
-    unixLisener, err := net.Listen("unix", "./socket")
+    unixLisener, err := net.Listen("tcp", ":1776")
 
     //Creates a infinite loop to Accept Connections and starts a go thread to 
     //handle it
