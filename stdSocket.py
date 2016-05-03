@@ -10,8 +10,8 @@ PORT = 1776
 # Create an in-memory stream
 with picamera.PiCamera() as camera:
     camera.start_preview()
-    camera.resolution = (80, 60)
-    camera.framerate = 30
+    camera.resolution = (160, 120)
+    camera.framerate = 60
     camera.vflip = True
     # Camera warm-up time
     time.sleep(2)
