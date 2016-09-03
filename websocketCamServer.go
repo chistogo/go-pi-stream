@@ -139,28 +139,3 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 
 
-
-
-
-//
-// cespare | chistogo: play.golang.org                                                                                                                                                │ _cn
-// 21:24:44          <-- | turtil (~turtil@unaffiliated/kylescottmcgill) has quit (Ping timeout: 252 seconds)                                                                                       │ _jesse_
-// 21:25:54          --> | clouddig (~clouddig@cce02cs4040-fa12-z.ams.hpecore.net) has joined #go-nuts                                                                                              │ _rsc`
-// 21:25:57      cespare | chistogo: if you want to read everything until the connection is closed, you can just use ioutil.ReadAll                                                                 │ a00001
-// 21:26:43     chistogo | I did't know that. I will use that                                                                                                                                       │ aarwine
-// 21:26:52      cespare | chistogo: You're overwriting your buffer from the beginning in every loop iteration                                                                                      │ abra0
-// 21:27:08          --> | velovix (~velovix@149.169.218.242) has joined #go-nuts                                                                                                                   │ acmehendel
-// 21:27:10          <-- | nathanleclaire (~nathanlec@c-73-189-234-64.hsd1.ca.comcast.net) has quit (Quit: nathanleclaire)                                                                          │ acrocity
-// 21:27:10 +skelterjohn | also, yeah that                                                                                                                                                          │ adam^
-// 21:27:25     chistogo | cespare Is that bad?                                                                                                                                                     │ adamcm
-// 21:27:31      cespare | chistogo: it's wrong                                                                                                                                                     │ adeschamps
-// 21:27:32 +skelterjohn | if you were to write .ReadFile, you'd need to move the buffer                                                                                                            │ aduermael_
-// 21:27:36          <-- | charles (~quassel@pdpc/supporter/active/charles) has quit (Remote host closed the connection)                                                                            │ AG_Clinton
-// 21:27:38 +skelterjohn | chistogo: it simply cannot work as written                                                                                                                               │ agatoxd
-// 21:27:51      cespare | chistogo: with the small file, it so happens you slurp up the whole thing in one Read                                                                                    │ agundy
-// 21:27:56          <-- | frostyfrog (~frostyfro@unaffiliated/frostyfrog) has quit (Read error: Connection reset by peer)                                                                          │ ahuman
-// 21:27:58          --> | tonist (~tonistiig@c-24-23-191-227.hsd1.ca.comcast.net) has joined #go-nuts                                                                                              │ aidan-
-// 21:28:18      cespare | chistogo: but with the large one, it takes multiple turns around the loop, and the way you've written it is broken because each read writes the same data at the         │ aissen
-//                       | beginning of the buffer                                                                                                                                          
-
-//Message types : websocket.BinaryMessage or websocket.TextMessage (UTF-8)
